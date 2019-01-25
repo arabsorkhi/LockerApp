@@ -30,6 +30,7 @@ namespace LockerApp
                 if (match == true)
                 {
                     Settings.Default["pWord"] = pw1;
+                    Settings.Default.Save();
                     MessageBox.Show("Password saved!");
                     this.Close();
                 }
