@@ -21,6 +21,40 @@ namespace LockerApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string old = Settings.Default["pWord"].ToString();
+            if(old == "")
+            {
+                NewPWord();
+            }
+            if(old != "")
+            {
+                bool same = old.Equals(txtOldPw.Text);
+                try
+                {
+                    if(same == true)
+                    {
+                        NewPWord();
+                        MessageBox.Show("Password changed", "Success");
+                    }
+                }
+                catch( Exception ex)
+                {
+                    MessageBox.Show("Something went wrong");
+                }
+            }
+
+
+            
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void NewPWord()
+        {
             try
             {
                 string pw1 = txtPw1.Text;
@@ -41,15 +75,10 @@ namespace LockerApp
                     txtPw2.Clear();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error");
             }
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

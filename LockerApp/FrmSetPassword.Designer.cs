@@ -34,11 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPw1 = new System.Windows.Forms.TextBox();
             this.txtPw2 = new System.Windows.Forms.TextBox();
+            this.txtOldPw = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(44, 89);
+            this.btnBack.Location = new System.Drawing.Point(44, 119);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 0;
@@ -48,7 +50,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(165, 89);
+            this.btnSave.Location = new System.Drawing.Point(165, 119);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(91, 23);
             this.btnSave.TabIndex = 1;
@@ -90,11 +92,30 @@
             this.txtPw2.TabIndex = 5;
             this.txtPw2.UseSystemPasswordChar = true;
             // 
+            // txtOldPw
+            // 
+            this.txtOldPw.Location = new System.Drawing.Point(99, 89);
+            this.txtOldPw.Name = "txtOldPw";
+            this.txtOldPw.Size = new System.Drawing.Size(157, 20);
+            this.txtOldPw.TabIndex = 7;
+            this.txtOldPw.UseSystemPasswordChar = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Old password:";
+            // 
             // FrmSetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 124);
+            this.ClientSize = new System.Drawing.Size(298, 154);
+            this.Controls.Add(this.txtOldPw);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPw2);
             this.Controls.Add(this.txtPw1);
             this.Controls.Add(this.label2);
@@ -118,5 +139,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPw1;
         private System.Windows.Forms.TextBox txtPw2;
+        private System.Windows.Forms.TextBox txtOldPw;
+        private System.Windows.Forms.Label label3;
     }
 }
